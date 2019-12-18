@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar color="primary"> 
+      <ion-title>
+        Eficatus SMS
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content scroll="false">
+    <div padding>
+      
+      <form (ngSubmit)="loginUser()">
+          <ion-item>
+              <ion-label stacked>CNPJ</ion-label>
+              <ion-input [(ngModel)]="cnpj" name="CNPJ" type="text"></ion-input>
+            </ion-item>
+        <ion-item>
+          <ion-label stacked>Usuario</ion-label>
+          <ion-input [(ngModel)]="email" name="email" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Senha</ion-label>
+          <ion-input [(ngModel)]="senha" name="senha" type="password"></ion-input>
+        </ion-item>
+        <button ion-button block type="submit" class="login">ENTRAR</button>
+      </form>
+    </div>
+    <form (ngSubmit)="eviarSMS()">
+      <ion-item>
+        <ion-label stacked>Número</ion-label>
+        <ion-input [(ngModel)]="num" name="num" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Mensagem</ion-label>
+        <ion-input [(ngModel)]="mensagem" name="mensagem" type="text"></ion-input>
+      </ion-item>
+      <button ion-button block type="submit" class="login">ENVIAR</button>
+    </form>
+  </ion-content>
+  

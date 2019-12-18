@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>dashboard</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div padding>
+    
+    <form (ngSubmit)="eviarSMS()">
+      <ion-item>
+        <ion-label stacked>Número</ion-label>
+        <ion-input [(ngModel)]="num" name="num" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Mensagem</ion-label>
+        <ion-input [(ngModel)]="mensagem" name="mensagem" type="text"></ion-input>
+      </ion-item>
+      <button ion-button block type="submit" class="login">ENVIAR</button>
+    </form>
+  </div>
+</ion-content>
